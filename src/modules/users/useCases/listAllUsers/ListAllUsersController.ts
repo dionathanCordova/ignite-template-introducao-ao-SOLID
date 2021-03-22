@@ -12,7 +12,7 @@ class ListAllUsersController {
 
       return response.status(201).json(all);
     } catch (error) {
-      return response.status(400).json(error.message);
+      return response.status(400).json({ error: error.message });
     }
   }
 }
