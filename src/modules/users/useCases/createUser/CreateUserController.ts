@@ -12,6 +12,7 @@ class CreateUserController {
       const user = this.createUserUseCase.execute({ email, name });
 
       const userCreated = {
+        id: user.id,
         name: user.name,
         email: user.email,
         admin: user.admin,
